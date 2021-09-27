@@ -87,10 +87,10 @@ def predict(df):
             df.Insurance_Comprehensive[i]=0
             df.Insurane_Expired[i]=0
     df.drop('Insr_Type',axis=1,inplace=True)
-    df["low"]=df["Insr_Type"]
-    df["Budget"]=df["Insr_Type"]
-    df["Medium"]=df["Insr_Type"]
-    df["Highend"]=df["Insr_Type"]
+    df["low"]=df["Car_Catgor"]
+    df["Budget"]=df["Car_Catgor"]
+    df["Medium"]=df["Car_Catgor"]
+    df["Highend"]=df["Car_Catgor"]
     for i in range(len(df.Car_Catgor)):
         if(df.Car_Catgor[i]=='Luxury'):
             df.low[i]=1
